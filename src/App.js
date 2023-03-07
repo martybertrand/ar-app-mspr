@@ -9,13 +9,12 @@ export default function App() {
   // Use Webpack to load in target file
   const targetFile = require('./Logo.png').default;
   return (
-    <BrowserCompatibility>
-    <ZapparCanvas>
+    <><BrowserCompatibility /><ZapparCanvas>
       {/* Setup Zappar Camera, setting camera object's ref */}
       <ZapparCamera ref={camera} />
-       {/* Setup Image Tracker, passing our target file and camera ref */}
+      {/* Setup Image Tracker, passing our target file and camera ref */}
       <ImageTracker targetImage={targetFile} camera={camera}>
-      {/* Create a normal pink sphere to be tracked to the target */}
+        {/* Create a normal pink sphere to be tracked to the target */}
         <mesh>
           <sphereBufferGeometry />
           <meshStandardMaterial color="hotpink" />
@@ -23,8 +22,7 @@ export default function App() {
       </ImageTracker>
       {/* Normal directional light */}
       <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
-    </ZapparCanvas>
-    </BrowserCompatibility>
+    </ZapparCanvas></>
   );
 }
 render(<App />, document.getElementById('root'));
