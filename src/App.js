@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { render } from 'react-dom';
+import React, { useRef } from 'react';
+import { ZapparCamera, ImageTracker, ZapparCanvas } from '@zappar/zappar-react-three-fiber';
 
-function App() {
+export default function App() {
+  // Setup a camera ref, as we need to pass it to the tracker.
+  const camera = useRef();
+  // Use Webpack to load in target file
+  const targetFile = require('./Logo.png').default;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ZapparCanvas>
+      {/* Setup Zappar Camera, setting camera object's ref */}
+      <ZapparCamera ref={camera} />
+       {/* Setup Image Tracker, passing our target file and camera ref */}
+      <ImageTracker targetImage={targetFile} camera={camera}>
+      {/* Create a normal pink sphere to be tracked to the target */}
+        <mesh>
+          <sphereBufferGeometry />
+          <meshStandardMaterial color="hotpink" />
+        </mesh>
+      </ImageTracker>
+      {/* Normal directional light */}
+      <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
+    </ZapparCanvas>
   );
 }
-
-export default App;
+render(<App />, document.getElementById('root'));
