@@ -12,7 +12,6 @@ function App() {
       <ZapparCanvas>
         <ZapparCamera />
         
-        <ImageTracker targetImage='./model/model.gltf'/>
         <MyCustomObject />
 
       </ZapparCanvas>
