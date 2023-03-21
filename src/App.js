@@ -13,9 +13,7 @@ function App() {
         <ZapparCamera />
         
         <InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
-          <mesh>
             <MyCustomObject/>
-          </mesh>
         </InstantTracker>
       <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
 
