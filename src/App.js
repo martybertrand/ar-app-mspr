@@ -1,4 +1,32 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react'
+import { Canvas, useLoader } from 'react-three-fiber'
+import { useZapparCamera, ZapparCamera } from '@zappar/zappar-react-three-fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+
+function App() {
+  const cameraRef = useRef()
+  const { camera } = useZapparCamera()
+
+  return (
+    <Canvas>
+      <ZapparCamera ref={cameraRef} />
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Model />
+    </Canvas>
+  )
+
+  function Model() {
+    const gltfRef = useRef()
+    const { gltf } = useLoader(GLTFLoader, './model/model.gltf')
+
+    return <primitive ref={gltfRef} object={gltf.scene} />
+  }
+}
+
+
+
+/*import React, { useState } from 'react';
 import {
  ZapparCamera, InstantTracker, ZapparCanvas, BrowserCompatibility, ImageTracker
 } from '@zappar/zappar-react-three-fiber';
@@ -32,7 +60,7 @@ function App() {
 
 export default App;
 
-/*
+
 <InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
           <mesh>
             <boxBufferGeometry />
