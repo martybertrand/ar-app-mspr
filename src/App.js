@@ -1,36 +1,7 @@
-import React, { useRef } from 'react'
-import { Canvas, useLoader } from 'react-three-fiber'
-import { ZapparCamera } from '@zappar/zappar-react-three-fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-
-function App() {
-  const cameraRef = useRef()
-
-  return (
-    <Canvas>
-      <ZapparCamera ref={cameraRef} />
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Model />
-    </Canvas>
-  )
-
-  function Model() {
-    const gltfRef = useRef()
-    const { gltf } = useLoader(GLTFLoader, './model/model.gltf')
-
-    return <primitive ref={gltfRef} object={gltf.scene} />
-  }
-}
-
-export default App;
-
-
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 import {
- ZapparCamera, InstantTracker, ZapparCanvas, BrowserCompatibility, ImageTracker
+ ZapparCamera, InstantTracker, ZapparCanvas, BrowserCompatibility
 } from '@zappar/zappar-react-three-fiber';
-import MyCustomObject from './MyCustomObject';
 
 function App() {
   const [placementMode, setPlacementMode] = useState(true);
@@ -40,7 +11,13 @@ function App() {
       <ZapparCanvas>
         <ZapparCamera />
         
-        <MyCustomObject />
+        <InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
+          <mesh>
+            <boxBufferGeometry />
+            <meshStandardMaterial color="hotpink" />
+          </mesh>
+        </InstantTracker>
+      <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
 
       </ZapparCanvas>
       <div
@@ -59,16 +36,3 @@ function App() {
 }
 
 export default App;
-
-
-<InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
-          <mesh>
-            <boxBufferGeometry />
-            <meshStandardMaterial color="hotpink" />
-          </mesh>
-        </InstantTracker>
-    <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
-*/
-
-
-
