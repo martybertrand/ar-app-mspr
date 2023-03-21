@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
- ZapparCamera, InstantTracker, ZapparCanvas, BrowserCompatibility
+ ZapparCamera, InstantTracker, ZapparCanvas, BrowserCompatibility, ImageTracker
 } from '@zappar/zappar-react-three-fiber';
 import MyCustomObject from './MyCustomObject';
 
@@ -12,9 +12,9 @@ function App() {
       <ZapparCanvas>
         <ZapparCamera />
         
-        <InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
+        <ImageTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
             <MyCustomObject/>
-        </InstantTracker>
+        </ImageTracker>
       <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
 
       </ZapparCanvas>
