@@ -1,11 +1,10 @@
 import React, { useRef } from 'react'
 import { Canvas, useLoader } from 'react-three-fiber'
-import { useZapparCamera, ZapparCamera } from '@zappar/zappar-react-three-fiber'
+import { ZapparCamera } from '@zappar/zappar-react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 function App() {
   const cameraRef = useRef()
-  const { camera } = useZapparCamera()
 
   return (
     <Canvas>
