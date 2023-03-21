@@ -1,4 +1,26 @@
-import React, { useState } from 'react';
+import { ZapparCamera, ZapparCanvas } from "@zappar/zappar-react-three-fiber";
+import { useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
+import React from 'react'
+
+
+export default function App() {
+  
+  const gltf = useLoader(GLTFLoader, './model/model.gltf');
+
+    return (
+      <ZapparCanvas>
+        <ZapparCamera>
+        <primitive object={gltf.scene} />
+      </ZapparCamera>
+      </ZapparCanvas>
+      
+    )
+}
+
+
+/*import React, { useState } from 'react';
 import {
  ZapparCamera, InstantTracker, ZapparCanvas, BrowserCompatibility, ImageTracker
 } from '@zappar/zappar-react-three-fiber';
@@ -33,4 +55,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
