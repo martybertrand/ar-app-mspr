@@ -23,6 +23,7 @@ function App() {
   }
 }
 
+export default App;
 
 
 /*import React, { useState } from 'react';
