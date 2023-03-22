@@ -12,10 +12,12 @@ export default function App() {
        <BrowserCompatibility />
        <ZapparCanvas>
          <ZapparCamera />
+         <InstantTracker>
          <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} />
 
            <primitive object={model.scene} position={[0, 0, -5]} scale={[100, 100, 100]}/>
+        </InstantTracker>
          <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
 
        </ZapparCanvas>
