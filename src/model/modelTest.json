@@ -1,0 +1,148 @@
+{
+    "uri": "modelExpresso.glb",
+    "mimeType": "model/gltf-binary",
+    "validatorVersion": "2.0.0-dev.3.8",
+    "validatedAt": "2023-03-22T18:50:45.506Z",
+    "issues": {
+        "numErrors": 0,
+        "numWarnings": 0,
+        "numInfos": 6,
+        "numHints": 3,
+        "messages": [
+            {
+                "code": "BUFFER_VIEW_TARGET_MISSING",
+                "message": "bufferView.target should be set for vertex or index data.",
+                "severity": 3,
+                "pointer": "/meshes/0/primitives/0/attributes/POSITION"
+            },
+            {
+                "code": "BUFFER_VIEW_TARGET_MISSING",
+                "message": "bufferView.target should be set for vertex or index data.",
+                "severity": 3,
+                "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+            },
+            {
+                "code": "BUFFER_VIEW_TARGET_MISSING",
+                "message": "bufferView.target should be set for vertex or index data.",
+                "severity": 3,
+                "pointer": "/meshes/0/primitives/0/indices"
+            },
+            {
+                "code": "UNUSED_OBJECT",
+                "message": "This object may be unused.",
+                "severity": 2,
+                "pointer": "/meshes/11/primitives/0/attributes/TEXCOORD_0"
+            },
+            {
+                "code": "UNUSED_OBJECT",
+                "message": "This object may be unused.",
+                "severity": 2,
+                "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0"
+            },
+            {
+                "code": "IMAGE_NPOT_DIMENSIONS",
+                "message": "Image has non-power-of-two dimensions: 400x500.",
+                "severity": 2,
+                "pointer": "/images/1"
+            },
+            {
+                "code": "IMAGE_NPOT_DIMENSIONS",
+                "message": "Image has non-power-of-two dimensions: 612x612.",
+                "severity": 2,
+                "pointer": "/images/2"
+            },
+            {
+                "code": "IMAGE_NPOT_DIMENSIONS",
+                "message": "Image has non-power-of-two dimensions: 592x565.",
+                "severity": 2,
+                "pointer": "/images/3"
+            },
+            {
+                "code": "IMAGE_NPOT_DIMENSIONS",
+                "message": "Image has non-power-of-two dimensions: 900x900.",
+                "severity": 2,
+                "pointer": "/images/4"
+            }
+        ],
+        "truncated": false
+    },
+    "info": {
+        "version": "2.0",
+        "generator": "babylon.js glTF exporter for 3dsmax 2 v20211112.3",
+        "resources": [
+            {
+                "pointer": "/buffers/0",
+                "mimeType": "application/gltf-buffer",
+                "storage": "glb",
+                "byteLength": 1009188
+            },
+            {
+                "pointer": "/images/0",
+                "mimeType": "image/jpeg",
+                "storage": "buffer-view",
+                "image": {
+                    "width": 1024,
+                    "height": 1024,
+                    "format": "rgb",
+                    "bits": 8
+                }
+            },
+            {
+                "pointer": "/images/1",
+                "mimeType": "image/jpeg",
+                "storage": "buffer-view",
+                "image": {
+                    "width": 400,
+                    "height": 500,
+                    "format": "rgb",
+                    "bits": 8
+                }
+            },
+            {
+                "pointer": "/images/2",
+                "mimeType": "image/jpeg",
+                "storage": "buffer-view",
+                "image": {
+                    "width": 612,
+                    "height": 612,
+                    "format": "rgb",
+                    "bits": 8
+                }
+            },
+            {
+                "pointer": "/images/3",
+                "mimeType": "image/jpeg",
+                "storage": "buffer-view",
+                "image": {
+                    "width": 592,
+                    "height": 565,
+                    "format": "rgb",
+                    "bits": 8
+                }
+            },
+            {
+                "pointer": "/images/4",
+                "mimeType": "image/jpeg",
+                "storage": "buffer-view",
+                "image": {
+                    "width": 900,
+                    "height": 900,
+                    "format": "rgb",
+                    "bits": 8
+                }
+            }
+        ],
+        "animationCount": 0,
+        "materialCount": 6,
+        "hasMorphTargets": false,
+        "hasSkins": false,
+        "hasTextures": true,
+        "hasDefaultScene": true,
+        "drawCallCount": 20,
+        "totalVertexCount": 7522,
+        "totalTriangleCount": 7522,
+        "maxUVs": 1,
+        "maxInfluences": 0,
+        "maxAttributes": 3
+    }
+}

@@ -1,0 +1,130 @@
+{
+  "uri": "model.gltf",
+  "mimeType": "model/gltf+json",
+  "validatorVersion": "2.0.0-dev.3.8",
+  "validatedAt": "2023-03-22T18:41:08.092Z",
+  "issues": {
+    "numErrors": 6,
+    "numWarnings": 0,
+    "numInfos": 2,
+    "numHints": 3,
+    "messages": [
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/POSITION"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "BUFFER_VIEW_TARGET_MISSING",
+        "message": "bufferView.target should be set for vertex or index data.",
+        "severity": 3,
+        "pointer": "/meshes/0/primitives/0/indices"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/11/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "IO_ERROR",
+        "message": "Node Exception: Error: ENOENT: no such file or directory, open '/Users/marty/Documents/ar-app-mspr/src/model/Espresso Machine gltf.bin'",
+        "severity": 0,
+        "pointer": "/buffers/0/uri"
+      },
+      {
+        "code": "IO_ERROR",
+        "message": "Node Exception: Error: ENOENT: no such file or directory, open '/Users/marty/Documents/ar-app-mspr/src/model/Plastic010_1K_Color.jpg'",
+        "severity": 0,
+        "pointer": "/images/0/uri"
+      },
+      {
+        "code": "IO_ERROR",
+        "message": "Node Exception: Error: ENOENT: no such file or directory, open '/Users/marty/Documents/ar-app-mspr/src/model/steel.jpg'",
+        "severity": 0,
+        "pointer": "/images/1/uri"
+      },
+      {
+        "code": "IO_ERROR",
+        "message": "Node Exception: Error: ENOENT: no such file or directory, open '/Users/marty/Documents/ar-app-mspr/src/model/dark plastic.jpg'",
+        "severity": 0,
+        "pointer": "/images/2/uri"
+      },
+      {
+        "code": "IO_ERROR",
+        "message": "Node Exception: Error: ENOENT: no such file or directory, open '/Users/marty/Documents/ar-app-mspr/src/model/water.jpg'",
+        "severity": 0,
+        "pointer": "/images/3/uri"
+      },
+      {
+        "code": "IO_ERROR",
+        "message": "Node Exception: Error: ENOENT: no such file or directory, open '/Users/marty/Documents/ar-app-mspr/src/model/red.jpg'",
+        "severity": 0,
+        "pointer": "/images/4/uri"
+      }
+    ],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for 3dsmax 2 v20211112.3",
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "external",
+        "uri": "Espresso%20Machine%20gltf.bin"
+      },
+      {
+        "pointer": "/images/0",
+        "storage": "external",
+        "uri": "Plastic010_1K_Color.jpg"
+      },
+      {
+        "pointer": "/images/1",
+        "storage": "external",
+        "uri": "steel.jpg"
+      },
+      {
+        "pointer": "/images/2",
+        "storage": "external",
+        "uri": "dark%20plastic.jpg"
+      },
+      {
+        "pointer": "/images/3",
+        "storage": "external",
+        "uri": "water.jpg"
+      },
+      {
+        "pointer": "/images/4",
+        "storage": "external",
+        "uri": "red.jpg"
+      }
+    ],
+    "animationCount": 0,
+    "materialCount": 6,
+    "hasMorphTargets": false,
+    "hasSkins": false,
+    "hasTextures": true,
+    "hasDefaultScene": true,
+    "drawCallCount": 20,
+    "totalVertexCount": 7522,
+    "totalTriangleCount": 7522,
+    "maxUVs": 1,
+    "maxInfluences": 0,
+    "maxAttributes": 3
+  }
+}
