@@ -12,7 +12,7 @@ export default function App() {
        <BrowserCompatibility />
        <ZapparCanvas>
          <ZapparCamera />
-         <InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, 0]}>
+         <InstantTracker placementMode={placementMode} placementCameraOffset={[0, 0, -5]}>
            <primitive object={model.scene} />
          </InstantTracker>
          <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
